@@ -1,0 +1,11 @@
+Flask_Web/instance/database.db
+Flask_Web/website/static/favicon.ico
+Flask_Web/website/__pycache__/__init__.cpython-311.pyc
+Flask_Web/website/__pycache__/models.cpython-311.pyc
+Flask_Web/website/__pycache__/views.cpython-311.pyc
+Flask_Web/website/static/assets/img/about-bg.jpg
+Flask_Web/website/static/assets/img/contact-bg.jpg
+Flask_Web/website/static/assets/img/home-bg.jpg
+Flask_Web/website/static/assets/img/post-bg.jpg
+Flask_Web/website/static/assets/img/post-sample-image.jpg
+Flask_Web/website/templates/test.html
