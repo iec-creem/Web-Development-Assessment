@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template
+from flask_login import login_user, login_required, logout_user, current_user
 
 
 # Set blueprint
@@ -16,3 +17,9 @@ def home():
 @views.route("/game1")
 def game1():
     return render_template("game1.html")
+
+# contact route
+@views.route("/contact")
+@login_required
+def contact():
+    return render_template("contact.html")
