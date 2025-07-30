@@ -31,8 +31,9 @@ def sign_up():
             new_user = User(email=email, username=username, password=generate_password_hash(password1, method='scrypt:32768:8:1'))
             db.session.add(new_user)
             db.session.commit()
+            login_user(new_user, remember=True)
             flash('Account Created!', category='success')
-            
+            return redirect(url_for('views.home'))
     return render_template("sign_up.html", user=current_user)
     
 # Login route
