@@ -4,6 +4,14 @@
 
 <h1 align="center">Contact</h1>
 
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item">
+        {{ note.data }}
+    </li>
+    {% endfor %}
+</ul>
+
 <form method="POST">
     <textarea name="note" id="note" class="form-control"></textarea>
     <br/>
