@@ -2,22 +2,32 @@
 
 {% block content %}
 
-<h1 align="center">Contact</h1>
-
-<ul class="list-group list-group-flush" id="notes">
-    {% for note in user.notes %}
-    <li class="list-group-item">
-        {{ note.data }}
-    </li>
-    {% endfor %}
-</ul>
-
-<form method="POST">
-    <textarea name="note" id="note" class="form-control"></textarea>
-    <br/>
-    <div align="center">
-        <button type="submit" class="btn btn-light">Add Comment</button>
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-lg-8 col-xl-6 text-center">
+            <h2 class="mt-3">Contact</h2>
+            <hr class="divider" />
+            <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</p>
+        </div>
     </div>
-</form>
+    <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+        <div class="col-lg-6">
+            <ul class="list-group list-group-flush" id="notes">
+                {% for note in user.notes %}
+                <li class="list-group-item">
+                    {{ note.data }}
+                </li>
+                {% endfor %}
+            </ul>
 
+            <form method="POST">
+                <textarea name="note" id="note" class="form-control" placeholder="Enter Note Here"></textarea>
+                <br/>
+                <div align="center">
+                    <button type="submit" class="btn btn-light">Add Comment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
