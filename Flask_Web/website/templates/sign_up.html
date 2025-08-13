@@ -2,27 +2,46 @@
 
 {% block content %}
 
-<h2>Sign Up</h2>
-
-<form method ="POST">
-    <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="text" id="email" name="email" class="form-control" placeholder="Enter Email Address"/>
-    
-        <label for="username">username</label>
-        <input type="text" id="username" name="username" class="form-control" placeholder="Enter Your Username"/>
-
-        <label for="password1">password</label>
-        <input type="password" id="password1" name="password1" class="form-control" placeholder="Enter Your Password"/>
-
-        <label for="password2">password</label>
-        <input type="password" id="password2" name="password2" class="form-control" placeholder="Enter Your Password Again"/>
-
-        <br/>
-        <div align="center">
-            <button class="btn btn-light" type="submit">Sign Up</button>
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-lg-8 col-xl-6 text-center">
+            <h2 class="mt-3">Sign Up</h2>
+            <hr class="divider" />
+            <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</p>
         </div>
     </div>
-</form>
+    <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+        <div class="col-lg-6">
+            <form method ="POST">
+                <div class="form-group">
+                    <div class="mb-3">
+                        <label for="email">Email Address</label>
+                        <input type="text" id="email" name="email" class="form-control" placeholder="Enter Email Address"/>
+                    </div>
+
+                    <div class="mb-3">            
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" class="form-control" placeholder="Enter Your Username"/>
+                    </div>
+
+                    <div class="mb-3">    
+                        <label for="password1">Password</label>
+                        <input type="password" id="password1" name="password1" class="form-control" placeholder="Enter Your Password"/>
+                    </div>
+
+                    <div class="mb-3">    
+                        <label for="password2">Password</label>
+                        <input type="password" id="password2" name="password2" class="form-control" placeholder="Enter Your Password Again"/>
+                    </div>
+
+                    <br/>
+                    <div align="center">
+                        <button class="btn btn-light" type="submit">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
