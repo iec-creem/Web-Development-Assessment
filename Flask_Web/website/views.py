@@ -1,6 +1,7 @@
-from flask import Blueprint, render_template, url_for, request, flash, redirect
+from flask import Blueprint, render_template, url_for, request, flash, redirect, jsonify
 from flask_login import login_user, login_required, logout_user, current_user
 from .models import User, Note
+import json
 from . import db
 
 # Set blueprint
@@ -33,3 +34,17 @@ def contact():
             db.session.commit()
             flash('Note added!', category='success')
     return render_template("contact.html", user=current_user)
+
+# Delete note route
+@views.route("/delete-note", methods=['POST'])
+def delete_note():
+    note = json.loads(request.data)
+    noteId = note['noteId']
+    note = Note.query.get(noteId)
+    if note:
+        if note.user_id == current_user.id:
+            db.session.delete(note)
+            db.session.commit()
+            flash('Note deleted!', category='success')
+    
+    return jsonify({})
