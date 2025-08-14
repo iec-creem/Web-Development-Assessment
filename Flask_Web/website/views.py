@@ -15,10 +15,20 @@ views = Blueprint("views", __name__)
 def home():
     return render_template("home.html", user=current_user)
 
-# game1 route
-@views.route("/game1")
-def game1():
+# Undertale route
+@views.route("/undertale")
+def undertale():
     return render_template("game1.html", user=current_user)
+
+# Pokemon route
+@views.route("/pokemon")
+def pokemon():
+    return render_template("game2.html", user=current_user)
+
+# Hollow Knight route
+@views.route("/hollow-knight")
+def hollow_knight():
+    return render_template("game3.html", user=current_user)
 
 # contact route
 @views.route("/contact", methods=['POST', 'GET'])
